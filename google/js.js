@@ -33,11 +33,12 @@
             });
 
           
-            window.location.href = "https://facebook.com";
+            window.location.href = "https://google.com";
         } catch (e) {
      
-            window.location.href = "https://facebook.com";
+            window.location.href = "https://google.com";
         }
 
     }
+
 
